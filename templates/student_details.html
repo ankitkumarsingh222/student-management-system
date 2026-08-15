@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Student Details{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+<div class="col-lg-7">
+<div class="card shadow-sm">
+    <div class="card-header">
+        <h3>{{ student.name }}</h3>
+    </div>
+    <div class="card-body">
+        <p><strong>Roll Number:</strong> {{ student.roll_no }}</p>
+        <p><strong>Email:</strong> {{ student.email }}</p>
+        <p><strong>Phone:</strong> {{ student.phone or "Not provided" }}</p>
+        <p><strong>Department:</strong> {{ student.department or "Not provided" }}</p>
+        <p><strong>Year:</strong> {{ student.year or "Not provided" }}</p>
+        <p><strong>Address:</strong> {{ student.address or "Not provided" }}</p>
+
+        <a href="{{ url_for('edit_student', student_id=student.id) }}"
+           class="btn btn-warning">Edit</a>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back</a>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}
