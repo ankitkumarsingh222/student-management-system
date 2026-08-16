@@ -1,17 +1,20 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import mysql.connector
 from mysql.connector import Error
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = "student-management-secret-key"
 
 DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "root",
-    "database": "student_management"
+    "host": os.getenv("MYSQL_HOST"),
+    "user": os.getenv("MYSQL_USER"),
+    "password": os.getenv("MYSQL_PASSWORD"),
+    "database": os.getenv("MYSQL_DATABASE")
 }
-
 def get_connection():
     return mysql.connector.connect(**DB_CONFIG)
 

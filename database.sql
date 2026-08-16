@@ -16,5 +16,5 @@ CREATE TABLE IF NOT EXISTS students (
 INSERT INTO students
 (roll_no, name, email, phone, department, year, address)
 VALUES
-('ECE001', 'Rahul Kumar', 'rahul@example.com', '9876543210', 'Electronics and Communication', 4, 'Bengaluru')
+('ECE001', 'Rahul', 'rahul@example.com', '222222222222', 'Electronics and Communication', 4, 'Bengaluru')
 ON DUPLICATE KEY UPDATE roll_no = roll_no;
