@@ -1,14 +1,13 @@
 # Student Management System
 ## Created by Ankit Kumar Singh
-A web-based Student Management System developed using Python, Flask, MySQL, HTML, CSS and Bootstrap.
+A web-based Student Management System developed using:
 - Python
 - Flask
 - MySQL
 - HTML
 - CSS
 - Bootstrap
-
-## Features
+## Features of the project
 
 1. Add students
 2. View all students
@@ -21,6 +20,5 @@ A web-based Student Management System developed using Python, Flask, MySQL, HTML
 
 In terminal: python app.py
 
-Then Open:
-
+Then Open the URL:
 http://127.0.0.1:5000
